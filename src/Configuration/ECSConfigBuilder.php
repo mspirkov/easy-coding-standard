@@ -363,19 +363,19 @@ final class ECSConfigBuilder
         }
 
         if ($perCS10) {
-            $this->dynamicSets[] = '@PER-CS1.0';
+            $this->dynamicSets[] = '@PER-CS1x0';
         }
 
         if ($perCS10Risky) {
-            $this->dynamicSets[] = '@PER-CS1.0:risky';
+            $this->dynamicSets[] = '@PER-CS1x0:risky';
         }
 
         if ($perCS20) {
-            $this->dynamicSets[] = '@PER-CS2.0';
+            $this->dynamicSets[] = '@PER-CS2x0';
         }
 
         if ($perCS20Risky) {
-            $this->dynamicSets[] = '@PER-CS2.0:risky';
+            $this->dynamicSets[] = '@PER-CS2x0:risky';
         }
 
         if ($perCSRisky) {
@@ -387,123 +387,123 @@ final class ECSConfigBuilder
         }
 
         if ($php54Migration) {
-            $this->dynamicSets[] = '@PHP54Migration';
+            $this->dynamicSets[] = '@PHP5x4Migration';
         }
 
         if ($php56MigrationRisky) {
-            $this->dynamicSets[] = '@PHP56Migration:risky';
+            $this->dynamicSets[] = '@PHP5x6Migration:risky';
         }
 
         if ($php70Migration) {
-            $this->dynamicSets[] = '@PHP70Migration';
+            $this->dynamicSets[] = '@PHP7x0Migration';
         }
 
         if ($php70MigrationRisky) {
-            $this->dynamicSets[] = '@PHP70Migration:risky';
+            $this->dynamicSets[] = '@PHP7x0Migration:risky';
         }
 
         if ($php71Migration) {
-            $this->dynamicSets[] = '@PHP71Migration';
+            $this->dynamicSets[] = '@PHP7x1Migration';
         }
 
         if ($php71MigrationRisky) {
-            $this->dynamicSets[] = '@PHP71Migration:risky';
+            $this->dynamicSets[] = '@PHP7x1Migration:risky';
         }
 
         if ($php73Migration) {
-            $this->dynamicSets[] = '@PHP73Migration';
+            $this->dynamicSets[] = '@PHP7x3Migration';
         }
 
         if ($php74Migration) {
-            $this->dynamicSets[] = '@PHP74Migration';
+            $this->dynamicSets[] = '@PHP7x4Migration';
         }
 
         if ($php74MigrationRisky) {
-            $this->dynamicSets[] = '@PHP74Migration:risky';
+            $this->dynamicSets[] = '@PHP7x4Migration:risky';
         }
 
         if ($php80Migration) {
-            $this->dynamicSets[] = '@PHP80Migration';
+            $this->dynamicSets[] = '@PHP8x0Migration';
         }
 
         if ($php80MigrationRisky) {
-            $this->dynamicSets[] = '@PHP80Migration:risky';
+            $this->dynamicSets[] = '@PHP8x0Migration:risky';
         }
 
         if ($php81Migration) {
-            $this->dynamicSets[] = '@PHP81Migration';
+            $this->dynamicSets[] = '@PHP8x1Migration';
         }
 
         if ($php82Migration) {
-            $this->dynamicSets[] = '@PHP82Migration';
+            $this->dynamicSets[] = '@PHP8x2Migration';
         }
 
         if ($php83Migration) {
-            $this->dynamicSets[] = '@PHP83Migration';
+            $this->dynamicSets[] = '@PHP8x3Migration';
         }
 
         if ($php84Migration) {
-            $this->dynamicSets[] = '@PHP84Migration';
+            $this->dynamicSets[] = '@PHP8x4Migration';
         }
 
         if ($phpunit30MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit30Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit3x0Migration:risky';
         }
 
         if ($phpunit32MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit32Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit3x2Migration:risky';
         }
 
         if ($phpunit35MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit35Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit3x5Migration:risky';
         }
 
         if ($phpunit43MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit43Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit4x3Migration:risky';
         }
 
         if ($phpunit48MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit48Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit4x8Migration:risky';
         }
 
         if ($phpunit50MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit50Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x0Migration:risky';
         }
 
         if ($phpunit52MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit52Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x2Migration:risky';
         }
 
         if ($phpunit54MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit54Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x4Migration:risky';
         }
 
         if ($phpunit55MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit55Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x5Migration:risky';
         }
 
         if ($phpunit56MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit56Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x6Migration:risky';
         }
 
         if ($phpunit57MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit57Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit5x7Migration:risky';
         }
 
         if ($phpunit60MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit60Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit6x0Migration:risky';
         }
 
         if ($phpunit75MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit75Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit7x5Migration:risky';
         }
 
         if ($phpunit84MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit84Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit8x4Migration:risky';
         }
 
         if ($phpunit100MigrationRisky) {
-            $this->dynamicSets[] = '@PHPUnit100Migration:risky';
+            $this->dynamicSets[] = '@PHPUnit10x0Migration:risky';
         }
 
         if ($psr1) {
