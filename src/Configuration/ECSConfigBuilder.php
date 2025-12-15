@@ -357,6 +357,8 @@ final class ECSConfigBuilder
         bool $php84MigrationRisky = false,
         bool $php85Migration = false,
         bool $php85MigrationRisky = false,
+        bool $auto = false,
+        bool $autoRisky = false,
         bool $autoPHPMigration = false,
         bool $autoPHPMigrationRisky = false,
         bool $autoPHPUnitMigrationRisky = false,
@@ -579,6 +581,14 @@ final class ECSConfigBuilder
 
         if ($symfonyRisky) {
             $this->dynamicSets[] = '@Symfony:risky';
+        }
+
+        if ($auto) {
+            $this->dynamicSets[] = '@auto';
+        }
+
+        if ($autoRisky) {
+            $this->dynamicSets[] = '@auto:risky';
         }
 
         if ($autoPHPMigration) {
