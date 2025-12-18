@@ -62,10 +62,7 @@ final class SourceFinder
             ->size('> 0')
             ->sortByName();
 
-        $filePaths = array_keys(iterator_to_array($finder));
-        Assert::allString($filePaths);
-
-        return $filePaths;
+        return array_keys(iterator_to_array($finder));
     }
 
     /**
