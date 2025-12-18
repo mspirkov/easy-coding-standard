@@ -77,6 +77,16 @@ final class ECSConfig extends Container
 
         $this->singleton($checkerClass);
         $this->autowireWhitespaceAwareFixer($checkerClass);
+
+        if (is_a($checkerClass, ConfigurableFixerInterface::class, true)) {
+            $this->extend(
+                $checkerClass,
+                static function (ConfigurableFixerInterface $configurableFixer): ConfigurableFixerInterface {
+                    $configurableFixer->configure([]);
+                    return $configurableFixer;
+                }
+            );
+        }
     }
 
     /**
