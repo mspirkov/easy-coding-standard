@@ -11,6 +11,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Util\Common;
 use Symplify\EasyCodingStandard\Console\Style\EasyCodingStandardStyle;
 use Symplify\EasyCodingStandard\Exception\ShouldNotHappenException;
+use Symplify\EasyCodingStandard\FileSystem\StaticRelativeFilePathHelper;
 use Symplify\EasyCodingStandard\Skipper\Skipper\Skipper;
 use Symplify\EasyCodingStandard\SniffRunner\DataCollector\SniffMetadataCollector;
 use Symplify\EasyCodingStandard\SniffRunner\ValueObject\Error\CodingStandardError;
@@ -21,6 +22,8 @@ use Symplify\EasyCodingStandard\SniffRunner\ValueObject\Error\CodingStandardErro
  */
 final class File extends BaseFile
 {
+    private string $relativePath;
+
     private string|null $activeSniffClass = null;
 
     private string|null $previousActiveSniffClass = null;
@@ -53,6 +56,7 @@ final class File extends BaseFile
         private EasyCodingStandardStyle $easyCodingStandardStyle
     ) {
         $this->path = $path;
+        $this->relativePath = StaticRelativeFilePathHelper::resolveFromCwd($path);
         $this->content = $content;
 
         // this property cannot be promoted as defined in constructor
@@ -197,7 +201,7 @@ final class File extends BaseFile
         $message = $data !== [] ? vsprintf($message, $data) : $message;
 
         $checkerClass = $this->resolveFullyQualifiedCode($sniffClassOrCode);
-        $codingStandardError = new CodingStandardError($line, $message, $checkerClass, $this->getFilename());
+        $codingStandardError = new CodingStandardError($line, $message, $checkerClass, $this->relativePath);
 
         $this->sniffMetadataCollector->addCodingStandardError($codingStandardError);
 
