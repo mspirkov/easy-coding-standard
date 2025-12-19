@@ -16,10 +16,12 @@ final class FileFactoryTest extends AbstractTestCase
     {
         $fileFactory = $this->make(FileFactory::class);
 
-        $file = $fileFactory->createFromFile(__DIR__ . '/FileFactorySource/SomeFile.php');
+        $filePath = __DIR__ . '/FileFactorySource/SomeFile.php';
+        $file = $fileFactory->createFromFile($filePath);
 
         $this->assertInstanceOf(File::class, $file);
         $this->assertInstanceOf(PhpCodeSnifferFile::class, $file);
         $this->assertInstanceOf(Fixer::class, $file->fixer);
+        $this->assertSame($filePath, $file->getFilename());
     }
 }
